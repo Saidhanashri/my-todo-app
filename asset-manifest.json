@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Saidhanashri/My-Todo-app.git/static/css/main.b778c508.css",
+    "main.js": "/Saidhanashri/My-Todo-app.git/static/js/main.aa9eefc5.js",
+    "static/js/453.ffbcad76.chunk.js": "/Saidhanashri/My-Todo-app.git/static/js/453.ffbcad76.chunk.js",
+    "index.html": "/Saidhanashri/My-Todo-app.git/index.html",
+    "static/media/logo.svg": "/Saidhanashri/My-Todo-app.git/static/media/logo.928f956d9c8ebcffb98a8e917154a81a.svg",
+    "main.b778c508.css.map": "/Saidhanashri/My-Todo-app.git/static/css/main.b778c508.css.map",
+    "main.aa9eefc5.js.map": "/Saidhanashri/My-Todo-app.git/static/js/main.aa9eefc5.js.map",
+    "453.ffbcad76.chunk.js.map": "/Saidhanashri/My-Todo-app.git/static/js/453.ffbcad76.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b778c508.css",
+    "static/js/main.aa9eefc5.js"
+  ]
+}
