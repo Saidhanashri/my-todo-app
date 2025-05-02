@@ -1,63 +1,111 @@
 /* Global */
+/* Center the app */
 body {
-  font-size: 16px;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #000000;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('/public/todo.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* App Container */
-.app-container {
-  max-width: 600px;
-  margin: 0 auto;
+.todo-container {
+  background: rgba(255, 255, 255, 0.167);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 90%;
+}
+
+.todo-app {
+  width: 400px;  /* Make sure this matches your task list width */
   padding: 20px;
-  background-color: #ac8bfa;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  margin: 40px auto;
 }
 
-.app-header {
+.input-container {
+  display: flex;
+  gap: 10px; /* Adds space between input and button */
+  margin-bottom: 16px; /* Optional: space below the whole input area */
+}
+
+.todo-input input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.todo-input button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Header styling */
+.header-left {
   display: flex;
   align-items: center;
-  padding: 20px 30px;
-  gap: 10px;
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
 }
 
+/* React logo */
 .react-logo {
+  width: 40px;
   height: 40px;
+  margin-right: 10px;
 }
 
+/* App title */
 .app-title {
-  font-size: 1.8rem;
+  font-size: 24px;
   font-weight: bold;
-  color: #ff9900;
   margin: 0;
+  color: #ffffff;
 }
 
+.app-container {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.642), /* Increased opacity for brightness */
+    rgba(173, 216, 230, 0.5),
+    rgba(186, 85, 211, 0.5) /* Increased opacity for better color visibility */
+  );
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); /* Slightly increased shadow opacity for more brightness */
+  -webkit-backdrop-filter: blur(50px); /* Increased blur value for stronger effect */
+  backdrop-filter: blur(4px); /* Same as above */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Slightly lighter border for contrast */
+}
+
+/* Header */
 h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
   text-align: center;
-  color: #000000;
   margin-bottom: 10px;
-  letter-spacing: 1px;
+  font-size: 28px;
+  color: #ffffff;
 }
 
-.input-section {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.input-section input[type="text"],
-.input-section input[type="date"] {
+/* Input box */
+.input-container input[type="text"] {
   flex: 1;
   padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  font-size: 16px;
 }
 
 .input-section button {
@@ -70,26 +118,47 @@ h1 {
   font-weight: bold;
 }
 
-
-.add-button {
+.input-container button {
+  padding: 10px 16px;
+  font-size: 16px;
+  margin-right: 10px;
   background-color: #7e00fce8;
   color: white;
-  padding: 10px 15px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  margin-top: 10px;
 }
 
 .add-button:hover {
-  background-color: #808080;
+  background-color: #8c19ffe8;
 }
 
 /* Task List */
-.todo-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Task List */
+.task-list {
+  margin-top: 20px;
+}
+
+/* Task item */
+.task-item {
+  background-color: #d3dbe1;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.task-buttons .edit-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.task-buttons .delete-btn {
+  background-color: #dc3545;
+  color: white;
 }
 
 .todo-list li {
@@ -128,18 +197,6 @@ h1 {
   font-size: 17px;
 }
 
-.todo-date {
-  font-size: 0.85rem;
-  color: #000000;
-  margin-left: 10px;
-}
-
-.due-date {
-  font-size: 0.8rem;
-  color: #424141;
-  margin-top: 4px;
-}
-
 .completed .todo-text {
   text-decoration: line-through;
   color: gray;
@@ -162,7 +219,7 @@ h1 {
 .edit-input {
   padding: 5px;
   font-size: 1rem;
-  margin-left: 10px;
+  margin-right: 10px;
   width: 60%;
 }
 
@@ -215,14 +272,15 @@ input[type="checkbox"] {
 }
 
 .clear-button:hover {
-  background-color: #808080;
+  background-color: #8c19ffe8;
 }
 
 /* Heading */
 h2 {
   margin-top: 0;
   font-weight: 400;
-  color: #000000;
+  text-align: center;
+  color: #ffffff;
 }
 
 /* Responsive Styles */

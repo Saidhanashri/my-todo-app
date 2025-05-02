@@ -17,7 +17,6 @@ function App() {
 
   const [filter, setFilter] = useState("All");
   const [newTodo, setNewTodo] = useState('');
-  const [newDueDate, setNewDueDate] = useState('');
   const today = new Date();
   const formattedDate = today.toLocaleDateString(undefined, {
     weekday: 'long',
@@ -37,9 +36,8 @@ function App() {
 
   const handleAddTodo = () => {
     if (newTodo.trim() === '') return;
-    setTodos([...todos, { text: newTodo, isCompleted: false, dueDate: newDueDate }]);
+    setTodos([...todos, { text: newTodo, isCompleted: false,}]);
     setNewTodo('');
-    setNewDueDate('');
   };  
 
   const toggleTask = (index) => {
@@ -73,28 +71,23 @@ function App() {
 
   return (
     <div className="App">
-      <header className="app-header">
+      <div className="header-left">
       <img
     src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
     className="react-logo" alt="React Logo"/>
   <h1 className="app-title">TODO</h1>
-      </header>
-      <div className="app-container">
+      </div>
+      <div className="todo-container">
         <h1>MY TODO LIST</h1>
         <h2>{formattedDate}</h2>
   
         {/* Input Section */}
-        <div className="input-section">
+        <div className="input-container">
           <input
             type="text"
             value={newTodo}
             onChange={(e) => setNewTodo(e.target.value)}
             placeholder="Enter a task"
-          />
-          <input
-            type="date"
-            value={newDueDate}
-            onChange={(e) => setNewDueDate(e.target.value)}
           />
           <button className="add-button" onClick={handleAddTodo}>Add</button>
         </div>

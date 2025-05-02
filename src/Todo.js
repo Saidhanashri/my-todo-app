@@ -30,7 +30,6 @@ function Todo({ task, index, toggleTask, removeTodo, editTodo }) {
         ) : (
           <div className="todo-text">
             <div>{task.text}</div>
-            <small className="due-date">Due: {task.dueDate}</small>
           </div>
         )}
       </div>
