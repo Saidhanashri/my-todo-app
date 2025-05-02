@@ -4,7 +4,7 @@ A clean and user-friendly React To-Do List application to manage daily tasks wit
 
 ### 🚀 Live Demo
 
-👉 [View Deployed App](https://saidhanashri.github.io/todo-app)
+👉 [View Deployed App](https://saidhanashri.github.io/my-todo-app/)
 
 ### ✨ Features
 
@@ -19,7 +19,7 @@ A clean and user-friendly React To-Do List application to manage daily tasks wit
 ### 🛠️ Tech Stack
 
 - [React](https://reactjs.org/)
-- [React Icons](https://react-icons.github.io/react-icons/)
+- React Icons
 - CSS
 - Git & GitHub
 - GitHub Pages (for deployment)
