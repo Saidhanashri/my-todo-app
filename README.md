@@ -6,6 +6,9 @@ A clean and user-friendly React To-Do List application to manage daily tasks wit
 
 👉 [View Deployed App](https://saidhanashri.github.io/my-todo-app/)
 
+📸 Screenshot
+![Screenshot (92)](https://github.com/user-attachments/assets/ef909be5-3356-4655-840d-629bf67bd0fc)
+
 ### ✨ Features
 
 - ✅ Add and remove tasks
