@@ -20,17 +20,15 @@ A clean and user-friendly React To-Do List application to manage daily tasks wit
 - 💡 Clean responsive UI using custom CSS and React Icons
 
 ### 🛠️ Tech Stack
-
-- [React](https://reactjs.org/)
+- ⚛️ React.js (Functional Components, useState, useEffect)
 - React Icons
-- CSS
+- 🎨 HTML5, CSS3 (Flexbox, media queries, modern effects)
+- ⚙️ JavaScript
 - Git & GitHub
 - GitHub Pages (for deployment)
 
 ### 📁 Run Locally
-
 To run this project on your local machine:
-
 #### 1. Clone the repository
 
 ```bash
